@@ -15,6 +15,7 @@ PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR B
 CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
 OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 """
+import os
 import sys
 sys.path.append("..")
 sys.path.append("../src")
@@ -69,14 +70,18 @@ def driver(prob_dict, repeat=10):
                                                   (np.max(res_list) - np.mean(res_list)) / np.max(res_list) * 100,
                                                   np.mean(time_list)))    
 
-prob_ind = list(range(1, 21))
-prob_name = ["randu{}".format(ind) for ind in prob_ind]
+data_dir = "../SMT2CNF/cnf"
 prob_info = {}
-for name in prob_name:
-    info = {}
-    info["problem name"] = name
-    info["path"] = "../data/sat/{}.cnf".format(name)
-    info["config"] = "../config/maxsat_default.yaml"
-    prob_info[name] = info
+for file_name in sorted(os.listdir(data_dir)):
+    if file_name.endswith(".cnf"):
+        name = os.path.splitext(file_name)[0]
+        info = {}
+        info["problem name"] = name
+        info["path"] = os.path.join(data_dir, file_name)
+        info["config"] = "../config/maxsat_default.yaml"
+        prob_info[name] = info
 
-driver(prob_info, repeat=20)
+# info = {}
+# info["problem name"] = name
+
+driver(prob_info, repeat=1)

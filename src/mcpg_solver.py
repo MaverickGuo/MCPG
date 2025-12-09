@@ -88,6 +88,10 @@ def mcpg_solver(nvar, config, data, verbose=False):
             tensor_probs = tensor_probs.repeat(1, config['repeat_times'])
             # construct the start point for next iteration
             start_samples = start_samples_temp.t()
+
+            current_best_obj = max(now_max_res).item()
+            print(f"Epoch {epoch} | Current Best Obj: {current_best_obj:.1f}")
+            
             if verbose:
                 if config["problem_type"] == "maxsat" and len(data.pdata) == 7:
                     res = max(now_max_res).item()
