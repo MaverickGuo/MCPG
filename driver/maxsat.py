@@ -45,13 +45,13 @@ def driver(prob_dict, repeat=10):
         dataloader = dataloader_select(config["problem_type"])
         data, nvar = dataloader(path)
 
-        num_epochs = 10
-        if nvar>=3000:
-            num_epochs = 16
-            config["num_ls"] = 10
-        if nvar>=4000:
-            num_epochs = 20
-            config["num_ls"] = 10
+        num_epochs = 1000
+        # if nvar>=3000:
+        #     num_epochs = 16
+        #     config["num_ls"] = 10
+        # if nvar>=4000:
+        #     num_epochs = 20
+        #     config["num_ls"] = 10
 
         config["max_epoch_num"] = (num_epochs-1) * config["sample_epoch_num"]+1
 
@@ -71,6 +71,7 @@ def driver(prob_dict, repeat=10):
                                                   np.mean(time_list)))    
 
 data_dir = "../SMT2CNF/cnf"
+# data_dir = "../data/sat"
 prob_info = {}
 for file_name in sorted(os.listdir(data_dir)):
     if file_name.endswith(".cnf"):

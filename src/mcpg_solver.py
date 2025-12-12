@@ -32,6 +32,26 @@ def mcpg_solver(nvar, config, data, verbose=False):
     net.to(device).reset_parameters()
     optimizer = torch.optim.Adam(net.parameters(), lr=config['lr_init'])
 
+    # === (Arithmetic Masks) ===
+    if hasattr(data, 'lock_mask') and data.lock_mask is not None:
+        lock_mask = data.lock_mask.to(device)
+        
+        # mul_mask: lock->0，free->1
+        # lock_mask: [0, 1, -1] -> abs: [0, 1, 1] -> 1-abs: [1, 0, 0]
+        mul_mask = (1 - torch.abs(lock_mask))
+        
+        # add_mask: lock positions have target values (0.999/0.001), free positions are 0
+        # lock 1 position (1) -> 0.999
+        # lock 0 position (-1) -> 0.001 (using boolean indexing for clarity and efficiency)
+        add_mask = torch.zeros(nvar).to(device)
+        add_mask[lock_mask == 1] = 0.999
+        add_mask[lock_mask == -1] = 0.001
+    else:
+        # If no mask, mul=1 (all keep), add=0 (all add nothing)
+        mul_mask = torch.ones(nvar).to(device)
+        add_mask = torch.zeros(nvar).to(device)
+    # ============================================
+
     start_samples = None
     for epoch in range(config['max_epoch_num']):
 
@@ -45,13 +65,29 @@ def mcpg_solver(nvar, config, data, verbose=False):
         else:
             retdict = net(regular, start_samples, value)
 
+        ######why not zero_grad before backward??????
+        optimizer.zero_grad()
+        ######
+
         retdict["loss"][0].backward()
         torch.nn.utils.clip_grad_norm_(net.parameters(), 1)
         optimizer.step()
 
+        # ===(Hard-Lock Application) ===
+        probs_raw = retdict["output"][0]
+        
+        # Core arithmetic operation: first zero out locked positions, then add target values
+        # This step cuts off gradients for locked variables, allowing the network to focus on unlocked variables
+        probs_locked = probs_raw * mul_mask + add_mask
+        
+        # Update back to ensure all subsequent steps (Loss calculation, entropy regularization, sampling) use locked probabilities
+        retdict["output"][0] = probs_locked
+        # ================================================
+
         # get start samples
         if epoch == 0:
             probs = (torch.zeros(nvar)+0.5).to(device)
+            probs = probs * mul_mask + add_mask
             tensor_probs = sample_initializer(
                 config["problem_type"], probs, config, data=data)
             temp_max, temp_max_info, temp_start_samples, value = sampler(

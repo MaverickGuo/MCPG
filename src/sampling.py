@@ -319,9 +319,59 @@ def mcpg_sampling_maxsat(
                    torch.rand(res_sample_old.shape[0], device=device)-0.5)
             samples[:, i] = torch.where(ind, samples[:, i], -samples[:, i])
 
-    cal_sample = samples[:, vi] * neg
-    res_clause = scatter(cal_sample, ci, reduce="max", dim=1)
-    res_sample = torch.sum(res_clause, dim=1)
+    # =============================================================
+    # === [关键修改] 分块计算最终得分 (解决爆显存的核心) ===
+    # =============================================================
+    
+    # 定义分块函数 (闭包，直接用外部变量 vi, ci, neg)
+    def chunked_eval(current_samples, chunk_size=2000):
+        """
+        分批次计算 cal_sample = samples[:, vi] * neg 及其后续规约
+        """
+        num_samples = current_samples.shape[0] # (Batch, NVar)
+        results = []
+        
+        # 按 chunk_size 遍历
+        for start in range(0, num_samples, chunk_size):
+            end = min(start + chunk_size, num_samples)
+            
+            # 1. 切片: 取出一小部分样本
+            batch_chunk = current_samples[start:end] # (Chunk, NVar)
+            
+            # 2. 膨胀计算 (显存杀手): 只对这一小部分做展开
+            # (Chunk, Total_Literals)
+            cal_chunk = batch_chunk[:, vi] * neg 
+            
+            # 3. 规约 (Scatter)
+            # (Chunk, Num_Clauses)
+            res_clause_chunk = scatter(cal_chunk, ci, reduce="max", dim=1)
+            
+            # 4. 求和得到分数
+            res_sample_chunk = torch.sum(res_clause_chunk, dim=1)
+            
+            # 收集结果
+            results.append(res_sample_chunk)
+            
+            # 显式释放显存 (这是一个好习惯)
+            del cal_chunk, res_clause_chunk
+
+        # 将所有碎片拼回完整的 Tensor
+        return torch.cat(results, dim=0)
+
+    # --- 替换原有的全量计算代码 ---
+    # 原代码 (会炸): 
+    # cal_sample = samples[:, vi] * neg
+    # res_clause = scatter(cal_sample, ci, reduce="max", dim=1)
+    # res_sample = torch.sum(res_clause, dim=1)
+    
+    # 新代码 (安全):
+    res_sample = chunked_eval(samples, chunk_size=2000)
+    
+    # =============================================================
+
+    # cal_sample = samples[:, vi] * neg
+    # res_clause = scatter(cal_sample, ci, reduce="max", dim=1)
+    # res_sample = torch.sum(res_clause, dim=1)
     if len(data.pdata) == 7:
         res_sample += nclause-data.pdata[6]+data.pdata[5]*data.pdata[6]
     else:

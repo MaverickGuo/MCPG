@@ -153,9 +153,10 @@ def append_neighbors(data, device=torch.device('cuda' if torch.cuda.is_available
 
 
 class Data_MaxSAT(object):
-    def __init__(self, pdata=None, ndata=None):
+    def __init__(self, pdata=None, ndata=None, lock_mask=None):
         self.pdata = pdata
         self.ndata = ndata
+        self.lock_mask = lock_mask
 
 
 def maxsat_dataloader(path, device=torch.device('cuda' if torch.cuda.is_available() else 'cpu')):
@@ -166,6 +167,8 @@ def maxsat_dataloader(path, device=torch.device('cuda' if torch.cuda.is_availabl
         ptype = 'p'
     else:
         raise (Exception("Unrecognized file type {}".format(path)))
+    
+    lock_mask = None
 
     with open(path) as f:
         lines = f.readlines()
@@ -191,6 +194,9 @@ def maxsat_dataloader(path, device=torch.device('cuda' if torch.cuda.is_availabl
                 if ptype == 'p':
                     weight = int(line[4])
                 nvar, nclause = int(line[2]), int(line[3])
+                #mask initialization
+                lock_mask = torch.zeros(nvar).to(device)
+
                 for i0 in range(nvar):
                     nvi.append([])
                     nci.append([])
@@ -200,6 +206,9 @@ def maxsat_dataloader(path, device=torch.device('cuda' if torch.cuda.is_availabl
                 continue
             tempvi = []
             tempneg = []
+
+            current_lits = []
+
             if ptype == 'p':
                 clause_weight_i = int(line[0])
                 if clause_weight_i == weight:
@@ -216,6 +225,20 @@ def maxsat_dataloader(path, device=torch.device('cuda' if torch.cuda.is_availabl
                     else:
                         vn[abs(ety) - 1] += 1
             else:
+                # CNF: <lit1> ... 0
+                for x in line:
+                    if x == '0': break
+                    current_lits.append(int(x))
+                
+                # CNF Hard-Lock: 只要长度为1就是硬约束
+                if len(current_lits) == 1:
+                    lit = current_lits[0]
+                    var_idx = abs(lit) - 1
+                    if lit > 0:
+                        lock_mask[var_idx] = 1
+                    else:
+                        lock_mask[var_idx] = -1
+                # ------------------------
                 for ety in line:
                     if ety == '0':
                         continue
@@ -249,6 +272,9 @@ def maxsat_dataloader(path, device=torch.device('cuda' if torch.cuda.is_availabl
     neg_index = torch.tensor(neg_index).to(device)
     ci_cuda = torch.tensor(clause_index).to(device)
 
+    if lock_mask is None: # in case lock_mask is not initialized
+         lock_mask = torch.zeros(nvar).to(device)
+
     ndata = [nvi, nci, nneg, sorted, degree]
     ndata = sort_node(ndata)
 
@@ -256,7 +282,10 @@ def maxsat_dataloader(path, device=torch.device('cuda' if torch.cuda.is_availabl
     if ptype == 'p':
         pdata = [nvar, nclause, variable_index,
                  ci_cuda, neg_index, weight, nhard]
-    return Data_MaxSAT(pdata=pdata, ndata=ndata), pdata[0]
+    # return Data_MaxSAT(pdata=pdata, ndata=ndata), pdata[0]
+
+    data_obj = Data_MaxSAT(pdata=pdata, ndata=ndata, lock_mask=lock_mask)
+    return data_obj, pdata[0]
 
 
 def sort_node(ndata):
