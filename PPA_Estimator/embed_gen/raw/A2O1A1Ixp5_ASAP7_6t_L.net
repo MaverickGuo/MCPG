@@ -1,0 +1,10 @@
+.SUBCKT A2O1A1Ixp5_ASAP7_6t_L A1 A2 B C VDD VSS Y
+MM9 Y C net039 VSS nmos_lvt w=54.0n l=20n nfin=2
+MM5 net045 A1 VSS VSS nmos_lvt w=108.00n l=20n nfin=4
+MM4 net039 A2 net045 VSS nmos_lvt w=108.00n l=20n nfin=4
+MM6 net039 B VSS VSS nmos_lvt w=54.0n l=20n nfin=2
+MM0 net038 A1 VDD VDD pmos_lvt w=27.0n l=20n nfin=1
+MM3 Y B net038 VDD pmos_lvt w=27.0n l=20n nfin=1
+MM1 net038 A2 VDD VDD pmos_lvt w=27.0n l=20n nfin=1
+MM2 Y C VDD VDD pmos_lvt w=27.0n l=20n nfin=1
+.ENDS

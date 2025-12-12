@@ -1,0 +1,142 @@
+[
+    {
+        "fet_name": "MM9",
+        "location": {
+            "flip": false,
+            "x": 0,
+            "y": 0
+        },
+        "nets": {
+            "D": "Y",
+            "G": "C",
+            "S": "net039"
+        },
+        "np": false
+    },
+    {
+        "fet_name": "MM5",
+        "location": {
+            "flip": false,
+            "x": 10,
+            "y": 0
+        },
+        "nets": {
+            "D": "net045",
+            "G": "A1",
+            "S": "VSS"
+        },
+        "np": false
+    },
+    {
+        "fet_name": "MM4",
+        "location": {
+            "flip": true,
+            "x": 6,
+            "y": 0
+        },
+        "nets": {
+            "D": "net039",
+            "G": "A2",
+            "S": "net045"
+        },
+        "np": false
+    },
+    {
+        "fet_name": "MM6",
+        "location": {
+            "flip": false,
+            "x": 2,
+            "y": 0
+        },
+        "nets": {
+            "D": "net039",
+            "G": "B",
+            "S": "VSS"
+        },
+        "np": false
+    },
+    {
+        "fet_name": "MM0",
+        "location": {
+            "flip": false,
+            "x": 10,
+            "y": 1
+        },
+        "nets": {
+            "D": "net038",
+            "G": "A1",
+            "S": "VDD"
+        },
+        "np": true
+    },
+    {
+        "fet_name": "MM3",
+        "location": {
+            "flip": false,
+            "x": 4,
+            "y": 1
+        },
+        "nets": {
+            "D": "Y",
+            "G": "B",
+            "S": "net038"
+        },
+        "np": true
+    },
+    {
+        "fet_name": "MM1",
+        "location": {
+            "flip": true,
+            "x": 8,
+            "y": 1
+        },
+        "nets": {
+            "D": "net038",
+            "G": "A2",
+            "S": "VDD"
+        },
+        "np": true
+    },
+    {
+        "fet_name": "MM2",
+        "location": {
+            "flip": false,
+            "x": 0,
+            "y": 1
+        },
+        "nets": {
+            "D": "Y",
+            "G": "C",
+            "S": "VDD"
+        },
+        "np": true
+    },
+    {
+        "fet_name": "MM5_1",
+        "location": {
+            "flip": true,
+            "x": 12,
+            "y": 0
+        },
+        "nets": {
+            "D": "net045",
+            "G": "A1",
+            "S": "VSS"
+        },
+        "np": false
+    },
+    {
+        "fet_name": "MM4_1",
+        "location": {
+            "flip": false,
+            "x": 8,
+            "y": 0
+        },
+        "nets": {
+            "D": "net039",
+            "G": "A2",
+            "S": "net045"
+        },
+        "np": false
+    }
+]

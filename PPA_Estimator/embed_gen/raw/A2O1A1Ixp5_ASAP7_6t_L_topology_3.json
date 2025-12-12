@@ -1,0 +1,1273 @@
+{
+  "signal_paths": [
+    {
+      "signal_pin": "A1",
+      "output_pin": "Y",
+      "input_routing_path": [
+        "routing_5_3",
+        "routing_4_5",
+        "routing_3_13",
+        "routing_2_10",
+        "routing_1_10",
+        "routing_0_15"
+      ],
+      "input_fet": {
+        "name": "MM0",
+        "terminal": "G",
+        "type": "PMOS"
+      },
+      "ds_sharing": {
+        "shared_net": "net038",
+        "input_fet_terminal": "D",
+        "output_fet_terminal": "S"
+      },
+      "output_fet": {
+        "name": "MM3",
+        "terminal": "D",
+        "type": "PMOS"
+      },
+      "output_routing_path": [
+        "routing_0_9",
+        "routing_1_13",
+        "routing_2_13",
+        "routing_3_1",
+        "routing_4_9",
+        "routing_5_6"
+      ],
+      "complete_path": [
+        "A1",
+        "routing_5_3",
+        "routing_4_5",
+        "routing_3_13",
+        "routing_2_10",
+        "routing_1_10",
+        "routing_0_15",
+        "MM0.G",
+        "MM0.D",
+        "DS-sharing(net038)",
+        "MM3.S",
+        "MM3.D",
+        "routing_0_9",
+        "routing_1_13",
+        "routing_2_13",
+        "routing_3_1",
+        "routing_4_9",
+        "routing_5_6",
+        "Y"
+      ]
+    },
+    {
+      "signal_pin": "A1",
+      "output_pin": "Y",
+      "input_routing_path": [
+        "routing_5_3",
+        "routing_4_5",
+        "routing_3_13",
+        "routing_2_10",
+        "routing_1_10",
+        "routing_0_15"
+      ],
+      "input_fet": {
+        "name": "MM0",
+        "terminal": "G",
+        "type": "PMOS"
+      },
+      "ds_sharing": {
+        "shared_net": "net038",
+        "input_fet_terminal": "D",
+        "output_fet_terminal": "S"
+      },
+      "output_fet": {
+        "name": "MM3",
+        "terminal": "D",
+        "type": "PMOS"
+      },
+      "output_routing_path": [
+        "routing_0_9",
+        "routing_1_13",
+        "routing_2_14",
+        "routing_3_2",
+        "routing_4_10",
+        "routing_5_6"
+      ],
+      "complete_path": [
+        "A1",
+        "routing_5_3",
+        "routing_4_5",
+        "routing_3_13",
+        "routing_2_10",
+        "routing_1_10",
+        "routing_0_15",
+        "MM0.G",
+        "MM0.D",
+        "DS-sharing(net038)",
+        "MM3.S",
+        "MM3.D",
+        "routing_0_9",
+        "routing_1_13",
+        "routing_2_14",
+        "routing_3_2",
+        "routing_4_10",
+        "routing_5_6",
+        "Y"
+      ]
+    },
+    {
+      "signal_pin": "A1",
+      "output_pin": "Y",
+      "input_routing_path": [
+        "routing_5_3",
+        "routing_4_5",
+        "routing_3_13",
+        "routing_2_10",
+        "routing_1_10",
+        "routing_0_15"
+      ],
+      "input_fet": {
+        "name": "MM0",
+        "terminal": "G",
+        "type": "PMOS"
+      },
+      "ds_sharing": {
+        "shared_net": "net038",
+        "input_fet_terminal": "D",
+        "output_fet_terminal": "S"
+      },
+      "output_fet": {
+        "name": "MM3",
+        "terminal": "D",
+        "type": "PMOS"
+      },
+      "output_routing_path": [
+        "routing_0_9",
+        "routing_1_13",
+        "routing_2_15",
+        "routing_3_4",
+        "routing_4_11",
+        "routing_5_6"
+      ],
+      "complete_path": [
+        "A1",
+        "routing_5_3",
+        "routing_4_5",
+        "routing_3_13",
+        "routing_2_10",
+        "routing_1_10",
+        "routing_0_15",
+        "MM0.G",
+        "MM0.D",
+        "DS-sharing(net038)",
+        "MM3.S",
+        "MM3.D",
+        "routing_0_9",
+        "routing_1_13",
+        "routing_2_15",
+        "routing_3_4",
+        "routing_4_11",
+        "routing_5_6",
+        "Y"
+      ]
+    },
+    {
+      "signal_pin": "A2",
+      "output_pin": "Y",
+      "input_routing_path": [
+        "routing_5_7",
+        "routing_4_12",
+        "routing_3_8",
+        "routing_2_7",
+        "routing_1_7",
+        "routing_0_7"
+      ],
+      "input_fet": {
+        "name": "MM4",
+        "terminal": "G",
+        "type": "NMOS"
+      },
+      "ds_sharing": {
+        "shared_net": "net039",
+        "input_fet_terminal": "D",
+        "output_fet_terminal": "S"
+      },
+      "output_fet": {
+        "name": "MM9",
+        "terminal": "D",
+        "type": "NMOS"
+      },
+      "output_routing_path": [
+        "routing_0_5",
+        "routing_1_1",
+        "routing_2_1",
+        "routing_3_1",
+        "routing_4_9",
+        "routing_5_6"
+      ],
+      "complete_path": [
+        "A2",
+        "routing_5_7",
+        "routing_4_12",
+        "routing_3_8",
+        "routing_2_7",
+        "routing_1_7",
+        "routing_0_7",
+        "MM4.G",
+        "MM4.D",
+        "DS-sharing(net039)",
+        "MM9.S",
+        "MM9.D",
+        "routing_0_5",
+        "routing_1_1",
+        "routing_2_1",
+        "routing_3_1",
+        "routing_4_9",
+        "routing_5_6",
+        "Y"
+      ]
+    },
+    {
+      "signal_pin": "A2",
+      "output_pin": "Y",
+      "input_routing_path": [
+        "routing_5_7",
+        "routing_4_13",
+        "routing_3_12",
+        "routing_2_12",
+        "routing_1_12",
+        "routing_0_13"
+      ],
+      "input_fet": {
+        "name": "MM1",
+        "terminal": "G",
+        "type": "PMOS"
+      },
+      "ds_sharing": {
+        "shared_net": "net038",
+        "input_fet_terminal": "D",
+        "output_fet_terminal": "S"
+      },
+      "output_fet": {
+        "name": "MM3",
+        "terminal": "D",
+        "type": "PMOS"
+      },
+      "output_routing_path": [
+        "routing_0_9",
+        "routing_1_13",
+        "routing_2_13",
+        "routing_3_1",
+        "routing_4_9",
+        "routing_5_6"
+      ],
+      "complete_path": [
+        "A2",
+        "routing_5_7",
+        "routing_4_13",
+        "routing_3_12",
+        "routing_2_12",
+        "routing_1_12",
+        "routing_0_13",
+        "MM1.G",
+        "MM1.D",
+        "DS-sharing(net038)",
+        "MM3.S",
+        "MM3.D",
+        "routing_0_9",
+        "routing_1_13",
+        "routing_2_13",
+        "routing_3_1",
+        "routing_4_9",
+        "routing_5_6",
+        "Y"
+      ]
+    },
+    {
+      "signal_pin": "A2",
+      "output_pin": "Y",
+      "input_routing_path": [
+        "routing_5_7",
+        "routing_4_13",
+        "routing_3_12",
+        "routing_2_12",
+        "routing_1_12",
+        "routing_0_13"
+      ],
+      "input_fet": {
+        "name": "MM1",
+        "terminal": "G",
+        "type": "PMOS"
+      },
+      "ds_sharing": {
+        "shared_net": "net038",
+        "input_fet_terminal": "D",
+        "output_fet_terminal": "S"
+      },
+      "output_fet": {
+        "name": "MM3",
+        "terminal": "D",
+        "type": "PMOS"
+      },
+      "output_routing_path": [
+        "routing_0_9",
+        "routing_1_13",
+        "routing_2_14",
+        "routing_3_2",
+        "routing_4_10",
+        "routing_5_6"
+      ],
+      "complete_path": [
+        "A2",
+        "routing_5_7",
+        "routing_4_13",
+        "routing_3_12",
+        "routing_2_12",
+        "routing_1_12",
+        "routing_0_13",
+        "MM1.G",
+        "MM1.D",
+        "DS-sharing(net038)",
+        "MM3.S",
+        "MM3.D",
+        "routing_0_9",
+        "routing_1_13",
+        "routing_2_14",
+        "routing_3_2",
+        "routing_4_10",
+        "routing_5_6",
+        "Y"
+      ]
+    },
+    {
+      "signal_pin": "A2",
+      "output_pin": "Y",
+      "input_routing_path": [
+        "routing_5_7",
+        "routing_4_13",
+        "routing_3_12",
+        "routing_2_12",
+        "routing_1_12",
+        "routing_0_13"
+      ],
+      "input_fet": {
+        "name": "MM1",
+        "terminal": "G",
+        "type": "PMOS"
+      },
+      "ds_sharing": {
+        "shared_net": "net038",
+        "input_fet_terminal": "D",
+        "output_fet_terminal": "S"
+      },
+      "output_fet": {
+        "name": "MM3",
+        "terminal": "D",
+        "type": "PMOS"
+      },
+      "output_routing_path": [
+        "routing_0_9",
+        "routing_1_13",
+        "routing_2_15",
+        "routing_3_4",
+        "routing_4_11",
+        "routing_5_6"
+      ],
+      "complete_path": [
+        "A2",
+        "routing_5_7",
+        "routing_4_13",
+        "routing_3_12",
+        "routing_2_12",
+        "routing_1_12",
+        "routing_0_13",
+        "MM1.G",
+        "MM1.D",
+        "DS-sharing(net038)",
+        "MM3.S",
+        "MM3.D",
+        "routing_0_9",
+        "routing_1_13",
+        "routing_2_15",
+        "routing_3_4",
+        "routing_4_11",
+        "routing_5_6",
+        "Y"
+      ]
+    },
+    {
+      "signal_pin": "A2",
+      "output_pin": "Y",
+      "input_routing_path": [
+        "routing_5_7",
+        "routing_4_13",
+        "routing_3_12",
+        "routing_2_12",
+        "routing_1_12",
+        "routing_0_13"
+      ],
+      "input_fet": {
+        "name": "MM4_1",
+        "terminal": "G",
+        "type": "NMOS"
+      },
+      "ds_sharing": {
+        "shared_net": "net039",
+        "input_fet_terminal": "D",
+        "output_fet_terminal": "S"
+      },
+      "output_fet": {
+        "name": "MM9",
+        "terminal": "D",
+        "type": "NMOS"
+      },
+      "output_routing_path": [
+        "routing_0_5",
+        "routing_1_1",
+        "routing_2_1",
+        "routing_3_1",
+        "routing_4_9",
+        "routing_5_6"
+      ],
+      "complete_path": [
+        "A2",
+        "routing_5_7",
+        "routing_4_13",
+        "routing_3_12",
+        "routing_2_12",
+        "routing_1_12",
+        "routing_0_13",
+        "MM4_1.G",
+        "MM4_1.D",
+        "DS-sharing(net039)",
+        "MM9.S",
+        "MM9.D",
+        "routing_0_5",
+        "routing_1_1",
+        "routing_2_1",
+        "routing_3_1",
+        "routing_4_9",
+        "routing_5_6",
+        "Y"
+      ]
+    },
+    {
+      "signal_pin": "B",
+      "output_pin": "Y",
+      "input_routing_path": [
+        "routing_5_4",
+        "routing_4_6",
+        "routing_3_3",
+        "routing_2_2",
+        "routing_1_2",
+        "routing_0_2"
+      ],
+      "input_fet": {
+        "name": "MM6",
+        "terminal": "G",
+        "type": "NMOS"
+      },
+      "ds_sharing": {
+        "shared_net": "net039",
+        "input_fet_terminal": "D",
+        "output_fet_terminal": "S"
+      },
+      "output_fet": {
+        "name": "MM9",
+        "terminal": "D",
+        "type": "NMOS"
+      },
+      "output_routing_path": [
+        "routing_0_5",
+        "routing_1_1",
+        "routing_2_1",
+        "routing_3_1",
+        "routing_4_9",
+        "routing_5_6"
+      ],
+      "complete_path": [
+        "B",
+        "routing_5_4",
+        "routing_4_6",
+        "routing_3_3",
+        "routing_2_2",
+        "routing_1_2",
+        "routing_0_2",
+        "MM6.G",
+        "MM6.D",
+        "DS-sharing(net039)",
+        "MM9.S",
+        "MM9.D",
+        "routing_0_5",
+        "routing_1_1",
+        "routing_2_1",
+        "routing_3_1",
+        "routing_4_9",
+        "routing_5_6",
+        "Y"
+      ]
+    },
+    {
+      "signal_pin": "B",
+      "output_pin": "Y",
+      "input_routing_path": [
+        "routing_5_4",
+        "routing_4_7",
+        "routing_3_6",
+        "routing_2_11",
+        "routing_1_11",
+        "routing_0_12"
+      ],
+      "input_fet": {
+        "name": "MM3",
+        "terminal": "G",
+        "type": "PMOS"
+      },
+      "direct_output_connection": {
+        "fet_terminal": "D"
+      },
+      "output_routing_path": [
+        "routing_0_9",
+        "routing_1_13",
+        "routing_2_13",
+        "routing_3_1",
+        "routing_4_9",
+        "routing_5_6"
+      ],
+      "complete_path": [
+        "B",
+        "routing_5_4",
+        "routing_4_7",
+        "routing_3_6",
+        "routing_2_11",
+        "routing_1_11",
+        "routing_0_12",
+        "MM3.G",
+        "MM3.D",
+        "routing_0_9",
+        "routing_1_13",
+        "routing_2_13",
+        "routing_3_1",
+        "routing_4_9",
+        "routing_5_6",
+        "Y"
+      ]
+    },
+    {
+      "signal_pin": "B",
+      "output_pin": "Y",
+      "input_routing_path": [
+        "routing_5_4",
+        "routing_4_7",
+        "routing_3_6",
+        "routing_2_11",
+        "routing_1_11",
+        "routing_0_12"
+      ],
+      "input_fet": {
+        "name": "MM3",
+        "terminal": "G",
+        "type": "PMOS"
+      },
+      "direct_output_connection": {
+        "fet_terminal": "D"
+      },
+      "output_routing_path": [
+        "routing_0_9",
+        "routing_1_13",
+        "routing_2_14",
+        "routing_3_2",
+        "routing_4_10",
+        "routing_5_6"
+      ],
+      "complete_path": [
+        "B",
+        "routing_5_4",
+        "routing_4_7",
+        "routing_3_6",
+        "routing_2_11",
+        "routing_1_11",
+        "routing_0_12",
+        "MM3.G",
+        "MM3.D",
+        "routing_0_9",
+        "routing_1_13",
+        "routing_2_14",
+        "routing_3_2",
+        "routing_4_10",
+        "routing_5_6",
+        "Y"
+      ]
+    },
+    {
+      "signal_pin": "B",
+      "output_pin": "Y",
+      "input_routing_path": [
+        "routing_5_4",
+        "routing_4_7",
+        "routing_3_6",
+        "routing_2_11",
+        "routing_1_11",
+        "routing_0_12"
+      ],
+      "input_fet": {
+        "name": "MM3",
+        "terminal": "G",
+        "type": "PMOS"
+      },
+      "direct_output_connection": {
+        "fet_terminal": "D"
+      },
+      "output_routing_path": [
+        "routing_0_9",
+        "routing_1_13",
+        "routing_2_15",
+        "routing_3_4",
+        "routing_4_11",
+        "routing_5_6"
+      ],
+      "complete_path": [
+        "B",
+        "routing_5_4",
+        "routing_4_7",
+        "routing_3_6",
+        "routing_2_11",
+        "routing_1_11",
+        "routing_0_12",
+        "MM3.G",
+        "MM3.D",
+        "routing_0_9",
+        "routing_1_13",
+        "routing_2_15",
+        "routing_3_4",
+        "routing_4_11",
+        "routing_5_6",
+        "Y"
+      ]
+    },
+    {
+      "signal_pin": "C",
+      "output_pin": "Y",
+      "input_routing_path": [
+        "routing_5_5",
+        "routing_4_8",
+        "routing_3_9",
+        "routing_2_9",
+        "routing_1_9",
+        "routing_0_10"
+      ],
+      "input_fet": {
+        "name": "MM9",
+        "terminal": "G",
+        "type": "NMOS"
+      },
+      "direct_output_connection": {
+        "fet_terminal": "D"
+      },
+      "output_routing_path": [
+        "routing_0_5",
+        "routing_1_1",
+        "routing_2_1",
+        "routing_3_1",
+        "routing_4_9",
+        "routing_5_6"
+      ],
+      "complete_path": [
+        "C",
+        "routing_5_5",
+        "routing_4_8",
+        "routing_3_9",
+        "routing_2_9",
+        "routing_1_9",
+        "routing_0_10",
+        "MM9.G",
+        "MM9.D",
+        "routing_0_5",
+        "routing_1_1",
+        "routing_2_1",
+        "routing_3_1",
+        "routing_4_9",
+        "routing_5_6",
+        "Y"
+      ]
+    },
+    {
+      "signal_pin": "C",
+      "output_pin": "Y",
+      "input_routing_path": [
+        "routing_5_5",
+        "routing_4_8",
+        "routing_3_9",
+        "routing_2_9",
+        "routing_1_9",
+        "routing_0_10"
+      ],
+      "input_fet": {
+        "name": "MM2",
+        "terminal": "G",
+        "type": "PMOS"
+      },
+      "direct_output_connection": {
+        "fet_terminal": "D"
+      },
+      "output_routing_path": [
+        "routing_0_11",
+        "routing_1_13",
+        "routing_2_13",
+        "routing_3_1",
+        "routing_4_9",
+        "routing_5_6"
+      ],
+      "complete_path": [
+        "C",
+        "routing_5_5",
+        "routing_4_8",
+        "routing_3_9",
+        "routing_2_9",
+        "routing_1_9",
+        "routing_0_10",
+        "MM2.G",
+        "MM2.D",
+        "routing_0_11",
+        "routing_1_13",
+        "routing_2_13",
+        "routing_3_1",
+        "routing_4_9",
+        "routing_5_6",
+        "Y"
+      ]
+    },
+    {
+      "signal_pin": "C",
+      "output_pin": "Y",
+      "input_routing_path": [
+        "routing_5_5",
+        "routing_4_8",
+        "routing_3_9",
+        "routing_2_9",
+        "routing_1_9",
+        "routing_0_10"
+      ],
+      "input_fet": {
+        "name": "MM2",
+        "terminal": "G",
+        "type": "PMOS"
+      },
+      "direct_output_connection": {
+        "fet_terminal": "D"
+      },
+      "output_routing_path": [
+        "routing_0_11",
+        "routing_1_13",
+        "routing_2_14",
+        "routing_3_2",
+        "routing_4_10",
+        "routing_5_6"
+      ],
+      "complete_path": [
+        "C",
+        "routing_5_5",
+        "routing_4_8",
+        "routing_3_9",
+        "routing_2_9",
+        "routing_1_9",
+        "routing_0_10",
+        "MM2.G",
+        "MM2.D",
+        "routing_0_11",
+        "routing_1_13",
+        "routing_2_14",
+        "routing_3_2",
+        "routing_4_10",
+        "routing_5_6",
+        "Y"
+      ]
+    },
+    {
+      "signal_pin": "C",
+      "output_pin": "Y",
+      "input_routing_path": [
+        "routing_5_5",
+        "routing_4_8",
+        "routing_3_9",
+        "routing_2_9",
+        "routing_1_9",
+        "routing_0_10"
+      ],
+      "input_fet": {
+        "name": "MM2",
+        "terminal": "G",
+        "type": "PMOS"
+      },
+      "direct_output_connection": {
+        "fet_terminal": "D"
+      },
+      "output_routing_path": [
+        "routing_0_11",
+        "routing_1_13",
+        "routing_2_15",
+        "routing_3_4",
+        "routing_4_11",
+        "routing_5_6"
+      ],
+      "complete_path": [
+        "C",
+        "routing_5_5",
+        "routing_4_8",
+        "routing_3_9",
+        "routing_2_9",
+        "routing_1_9",
+        "routing_0_10",
+        "MM2.G",
+        "MM2.D",
+        "routing_0_11",
+        "routing_1_13",
+        "routing_2_15",
+        "routing_3_4",
+        "routing_4_11",
+        "routing_5_6",
+        "Y"
+      ]
+    }
+  ],
+  "supply_paths": [
+    {
+      "start_supply": "VSS",
+      "supply_chain": [
+        "supply_6",
+        "supply_1"
+      ],
+      "fet_connection": {
+        "fet_name": "MM6",
+        "supply_terminal": "S",
+        "output_terminal": "D",
+        "fet_type": "NMOS"
+      },
+      "ds_sharing": {
+        "shared_net": "net039",
+        "first_fet_terminal": "D",
+        "second_fet_terminal": "S"
+      },
+      "output_fet": {
+        "fet_name": "MM9",
+        "terminal": "D",
+        "fet_type": "NMOS"
+      },
+      "output_routing_path": [
+        "routing_0_5",
+        "routing_1_1",
+        "routing_2_1",
+        "routing_3_1",
+        "routing_4_9",
+        "routing_5_6"
+      ],
+      "complete_path": [
+        "supply_6",
+        "supply_1",
+        "MM6.S",
+        "MM6.D",
+        "DS-sharing(net039)",
+        "MM9.S",
+        "MM9.D",
+        "routing_0_5",
+        "routing_1_1",
+        "routing_2_1",
+        "routing_3_1",
+        "routing_4_9",
+        "routing_5_6",
+        "Y"
+      ],
+      "network_type": "pull_down"
+    },
+    {
+      "start_supply": "VDD",
+      "supply_chain": [
+        "supply_7",
+        "supply_2"
+      ],
+      "fet_connection": {
+        "fet_name": "MM2",
+        "supply_terminal": "S",
+        "output_terminal": "D",
+        "fet_type": "PMOS"
+      },
+      "output_routing_path": [
+        "routing_0_11",
+        "routing_1_13",
+        "routing_2_13",
+        "routing_3_1",
+        "routing_4_9",
+        "routing_5_6"
+      ],
+      "complete_path": [
+        "supply_7",
+        "supply_2",
+        "MM2.S",
+        "MM2.D",
+        "routing_0_11",
+        "routing_1_13",
+        "routing_2_13",
+        "routing_3_1",
+        "routing_4_9",
+        "routing_5_6",
+        "Y"
+      ],
+      "network_type": "pull_up"
+    },
+    {
+      "start_supply": "VDD",
+      "supply_chain": [
+        "supply_7",
+        "supply_2"
+      ],
+      "fet_connection": {
+        "fet_name": "MM2",
+        "supply_terminal": "S",
+        "output_terminal": "D",
+        "fet_type": "PMOS"
+      },
+      "output_routing_path": [
+        "routing_0_11",
+        "routing_1_13",
+        "routing_2_14",
+        "routing_3_2",
+        "routing_4_10",
+        "routing_5_6"
+      ],
+      "complete_path": [
+        "supply_7",
+        "supply_2",
+        "MM2.S",
+        "MM2.D",
+        "routing_0_11",
+        "routing_1_13",
+        "routing_2_14",
+        "routing_3_2",
+        "routing_4_10",
+        "routing_5_6",
+        "Y"
+      ],
+      "network_type": "pull_up"
+    },
+    {
+      "start_supply": "VDD",
+      "supply_chain": [
+        "supply_7",
+        "supply_2"
+      ],
+      "fet_connection": {
+        "fet_name": "MM2",
+        "supply_terminal": "S",
+        "output_terminal": "D",
+        "fet_type": "PMOS"
+      },
+      "output_routing_path": [
+        "routing_0_11",
+        "routing_1_13",
+        "routing_2_15",
+        "routing_3_4",
+        "routing_4_11",
+        "routing_5_6"
+      ],
+      "complete_path": [
+        "supply_7",
+        "supply_2",
+        "MM2.S",
+        "MM2.D",
+        "routing_0_11",
+        "routing_1_13",
+        "routing_2_15",
+        "routing_3_4",
+        "routing_4_11",
+        "routing_5_6",
+        "Y"
+      ],
+      "network_type": "pull_up"
+    },
+    {
+      "start_supply": "VDD",
+      "supply_chain": [
+        "supply_7",
+        "supply_3"
+      ],
+      "fet_connection": {
+        "fet_name": "MM1",
+        "supply_terminal": "S",
+        "output_terminal": "D",
+        "fet_type": "PMOS"
+      },
+      "ds_sharing": {
+        "shared_net": "net038",
+        "first_fet_terminal": "D",
+        "second_fet_terminal": "S"
+      },
+      "output_fet": {
+        "fet_name": "MM3",
+        "terminal": "D",
+        "fet_type": "PMOS"
+      },
+      "output_routing_path": [
+        "routing_0_9",
+        "routing_1_13",
+        "routing_2_13",
+        "routing_3_1",
+        "routing_4_9",
+        "routing_5_6"
+      ],
+      "complete_path": [
+        "supply_7",
+        "supply_3",
+        "MM1.S",
+        "MM1.D",
+        "DS-sharing(net038)",
+        "MM3.S",
+        "MM3.D",
+        "routing_0_9",
+        "routing_1_13",
+        "routing_2_13",
+        "routing_3_1",
+        "routing_4_9",
+        "routing_5_6",
+        "Y"
+      ],
+      "network_type": "pull_up"
+    },
+    {
+      "start_supply": "VDD",
+      "supply_chain": [
+        "supply_7",
+        "supply_3"
+      ],
+      "fet_connection": {
+        "fet_name": "MM1",
+        "supply_terminal": "S",
+        "output_terminal": "D",
+        "fet_type": "PMOS"
+      },
+      "ds_sharing": {
+        "shared_net": "net038",
+        "first_fet_terminal": "D",
+        "second_fet_terminal": "S"
+      },
+      "output_fet": {
+        "fet_name": "MM3",
+        "terminal": "D",
+        "fet_type": "PMOS"
+      },
+      "output_routing_path": [
+        "routing_0_9",
+        "routing_1_13",
+        "routing_2_14",
+        "routing_3_2",
+        "routing_4_10",
+        "routing_5_6"
+      ],
+      "complete_path": [
+        "supply_7",
+        "supply_3",
+        "MM1.S",
+        "MM1.D",
+        "DS-sharing(net038)",
+        "MM3.S",
+        "MM3.D",
+        "routing_0_9",
+        "routing_1_13",
+        "routing_2_14",
+        "routing_3_2",
+        "routing_4_10",
+        "routing_5_6",
+        "Y"
+      ],
+      "network_type": "pull_up"
+    },
+    {
+      "start_supply": "VDD",
+      "supply_chain": [
+        "supply_7",
+        "supply_3"
+      ],
+      "fet_connection": {
+        "fet_name": "MM1",
+        "supply_terminal": "S",
+        "output_terminal": "D",
+        "fet_type": "PMOS"
+      },
+      "ds_sharing": {
+        "shared_net": "net038",
+        "first_fet_terminal": "D",
+        "second_fet_terminal": "S"
+      },
+      "output_fet": {
+        "fet_name": "MM3",
+        "terminal": "D",
+        "fet_type": "PMOS"
+      },
+      "output_routing_path": [
+        "routing_0_9",
+        "routing_1_13",
+        "routing_2_15",
+        "routing_3_4",
+        "routing_4_11",
+        "routing_5_6"
+      ],
+      "complete_path": [
+        "supply_7",
+        "supply_3",
+        "MM1.S",
+        "MM1.D",
+        "DS-sharing(net038)",
+        "MM3.S",
+        "MM3.D",
+        "routing_0_9",
+        "routing_1_13",
+        "routing_2_15",
+        "routing_3_4",
+        "routing_4_11",
+        "routing_5_6",
+        "Y"
+      ],
+      "network_type": "pull_up"
+    },
+    {
+      "start_supply": "VDD",
+      "supply_chain": [
+        "supply_7",
+        "supply_4"
+      ],
+      "fet_connection": {
+        "fet_name": "MM0",
+        "supply_terminal": "S",
+        "output_terminal": "D",
+        "fet_type": "PMOS"
+      },
+      "ds_sharing": {
+        "shared_net": "net038",
+        "first_fet_terminal": "D",
+        "second_fet_terminal": "S"
+      },
+      "output_fet": {
+        "fet_name": "MM3",
+        "terminal": "D",
+        "fet_type": "PMOS"
+      },
+      "output_routing_path": [
+        "routing_0_9",
+        "routing_1_13",
+        "routing_2_13",
+        "routing_3_1",
+        "routing_4_9",
+        "routing_5_6"
+      ],
+      "complete_path": [
+        "supply_7",
+        "supply_4",
+        "MM0.S",
+        "MM0.D",
+        "DS-sharing(net038)",
+        "MM3.S",
+        "MM3.D",
+        "routing_0_9",
+        "routing_1_13",
+        "routing_2_13",
+        "routing_3_1",
+        "routing_4_9",
+        "routing_5_6",
+        "Y"
+      ],
+      "network_type": "pull_up"
+    },
+    {
+      "start_supply": "VDD",
+      "supply_chain": [
+        "supply_7",
+        "supply_4"
+      ],
+      "fet_connection": {
+        "fet_name": "MM0",
+        "supply_terminal": "S",
+        "output_terminal": "D",
+        "fet_type": "PMOS"
+      },
+      "ds_sharing": {
+        "shared_net": "net038",
+        "first_fet_terminal": "D",
+        "second_fet_terminal": "S"
+      },
+      "output_fet": {
+        "fet_name": "MM3",
+        "terminal": "D",
+        "fet_type": "PMOS"
+      },
+      "output_routing_path": [
+        "routing_0_9",
+        "routing_1_13",
+        "routing_2_14",
+        "routing_3_2",
+        "routing_4_10",
+        "routing_5_6"
+      ],
+      "complete_path": [
+        "supply_7",
+        "supply_4",
+        "MM0.S",
+        "MM0.D",
+        "DS-sharing(net038)",
+        "MM3.S",
+        "MM3.D",
+        "routing_0_9",
+        "routing_1_13",
+        "routing_2_14",
+        "routing_3_2",
+        "routing_4_10",
+        "routing_5_6",
+        "Y"
+      ],
+      "network_type": "pull_up"
+    },
+    {
+      "start_supply": "VDD",
+      "supply_chain": [
+        "supply_7",
+        "supply_4"
+      ],
+      "fet_connection": {
+        "fet_name": "MM0",
+        "supply_terminal": "S",
+        "output_terminal": "D",
+        "fet_type": "PMOS"
+      },
+      "ds_sharing": {
+        "shared_net": "net038",
+        "first_fet_terminal": "D",
+        "second_fet_terminal": "S"
+      },
+      "output_fet": {
+        "fet_name": "MM3",
+        "terminal": "D",
+        "fet_type": "PMOS"
+      },
+      "output_routing_path": [
+        "routing_0_9",
+        "routing_1_13",
+        "routing_2_15",
+        "routing_3_4",
+        "routing_4_11",
+        "routing_5_6"
+      ],
+      "complete_path": [
+        "supply_7",
+        "supply_4",
+        "MM0.S",
+        "MM0.D",
+        "DS-sharing(net038)",
+        "MM3.S",
+        "MM3.D",
+        "routing_0_9",
+        "routing_1_13",
+        "routing_2_15",
+        "routing_3_4",
+        "routing_4_11",
+        "routing_5_6",
+        "Y"
+      ],
+      "network_type": "pull_up"
+    }
+  ]
+}
